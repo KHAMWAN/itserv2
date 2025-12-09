@@ -1,11 +1,12 @@
-from django.shortcuts import HttpResponse, render
+from django.shortcuts import render
+from django.http import HttpResponse
 
 # Create your views here.
 
 
 def index(request):
-    return HttpResponse('<h1> ยังไม่ได้สร้าง itapp/index.html</h1>')
+    return render(request, 'itapp/index.html')
 
 
 def home(request):
-    return HttpResponse('<h3> ยังไม่ได้สร้าง itapp/home.html</h3>')
+    return render(request, 'itapp/home.html')
