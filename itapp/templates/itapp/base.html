@@ -4,15 +4,25 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
+    {% block title %}
+    <title>IT Department</title>
+    {% endblock %}
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon" />
-    <link rel="stylesheet" href="" />
+    <link
+      rel="icon"
+      href="{% static 'imgs/favicon.ico' %}"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h2>IT App Base Template</h2>
-    <a href="{% url 'home' %}">Go back to home</a>
-    <script src="" async defer></script>
+    <h2>กลุ่มภารกิจด้านพัฒนาระบบบริการและสนับสนุนบริการสุขภาพ</h2>
+    <a href="{% url 'index' %}"> หน้าแรก index</a>
+    <a href="{% url 'karu' %}">ทะเบียนคอมพิวเตอร์ karu</a>
+    <a href="{% url 'about' %}">เกี่ยวกับเรา about</a>
+    <hr />
+    <div>{% block content %} {% endblock %}</div>
   </body>
 </html>
+<script src="" async defer></script>

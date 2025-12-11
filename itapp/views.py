@@ -8,5 +8,9 @@ def index(request):
     return render(request, 'itapp/index.html')
 
 
-def home(request):
-    return render(request, 'itapp/home.html')
+def karu(request):
+    return render(request, 'itapp/karu.html')
+
+
+def about(request):
+    return render(request, 'itapp/about.html')
