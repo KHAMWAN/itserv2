@@ -1,3 +1,104 @@
 {% extends "itapp/base.html" %} {% block content %}
-<h1>Index.html</h1>
+<div class="container">
+  <header class="app-header">
+    <div class="logo">
+      <span class="logo-icon">💡</span>
+      <span class="logo-text">Flashcard</span>
+    </div>
+    <div class="header-actions">
+      <button class="btn btn-study-mode">Study Mode</button>
+      <button class="btn btn-all-cards">All Cards</button>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="flashcard-area">
+      <div class="card-controls-top">
+        <select class="control-select">
+          <option>All Categories</option>
+        </select>
+        <div class="checkbox-container">
+          <input type="checkbox" id="hide-mastered" />
+          <label for="hide-mastered">Hide Mastered</label>
+        </div>
+        <button class="btn-shuffle">
+          <span class="shuffle-icon">↻</span> Shuffle
+        </button>
+      </div>
+
+      <div class="flashcard-container">
+        <div class="flashcard web-dev-card">
+          <span class="card-category">Web Development</span>
+          <h2 class="card-question">What does HTML stand for?</h2>
+          <p class="click-to-reveal">Click to reveal answer</p>
+          <div class="progress-bar-container">
+            <div class="progress-bar" style="width: 0%"></div>
+          </div>
+          <span class="progress-count">0/5</span>
+          <div class="decorative-sparkle top-right">✨</div>
+          <div class="decorative-sparkle bottom-left">✨</div>
+        </div>
+
+        <div class="card-actions-bottom">
+          <button class="btn-action btn-i-know">
+            <span class="icon">✅</span> I Know This
+          </button>
+          <button class="btn-action btn-reset">
+            <span class="icon">🔄</span> Reset Progress
+          </button>
+        </div>
+
+        <div class="card-navigation">
+          <button class="nav-btn previous">&lt; Previous</button>
+          <span class="card-index">Card 1 of 40</span>
+          <button class="nav-btn next">Next &gt;</button>
+        </div>
+      </div>
+    </section>
+
+    <aside class="study-statistics">
+      <h3>Study Statistics</h3>
+
+      <div class="stats-card total-cards">
+        <div class="stats-text">
+          <p class="stats-label">Total Cards</p>
+          <p class="stats-value">40</p>
+        </div>
+        <div class="stats-icon-box blue">
+          <span class="icon">🗂️</span>
+        </div>
+      </div>
+
+      <div class="stats-card mastered-cards">
+        <div class="stats-text">
+          <p class="stats-label">Mastered</p>
+          <p class="stats-value">11</p>
+        </div>
+        <div class="stats-icon-box green">
+          <span class="icon">🟢</span>
+        </div>
+      </div>
+
+      <div class="stats-card in-progress-cards">
+        <div class="stats-text">
+          <p class="stats-label">In Progress</p>
+          <p class="stats-value">21</p>
+        </div>
+        <div class="stats-icon-box pink">
+          <span class="icon">🟠</span>
+        </div>
+      </div>
+
+      <div class="stats-card not-started-cards">
+        <div class="stats-text">
+          <p class="stats-label">Not Started</p>
+          <p class="stats-value">8</p>
+        </div>
+        <div class="stats-icon-box purple">
+          <span class="icon">⚫</span>
+        </div>
+      </div>
+    </aside>
+  </main>
+</div>
 {% endblock %}

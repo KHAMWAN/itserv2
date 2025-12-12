@@ -14,3 +14,7 @@ def karu(request):
 
 def about(request):
     return render(request, 'itapp/about.html')
+
+
+def contact(request):
+    return render(request, 'itapp/contact.html')
