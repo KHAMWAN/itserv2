@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap');
+
+body {
+    font-family: "Noto Sans Thai", sans-serif;  
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
+
+.bg-dark {
+    background-color: #0d6efd !important;
+}
+
+.form-control {
+    background-color: var(--bs-primary-bg-subtle);
+}
+
+.btn {
+    color: #ebf5fb;
+    border: var(--bs-btn-border-width) solid #ebf5fb;
+}
+
+.btn:hover {
+    color:#00101a;
+    background-color: #13c6e3;
+    border-color: #13c6e3;
+}
