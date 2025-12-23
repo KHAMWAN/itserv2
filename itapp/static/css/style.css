@@ -4,7 +4,7 @@
     --color-primary-pink: #ff69b4; /* สีชมพูหลัก */
     --color-text-dark: #333;
     --color-text-light: #fff;
-    --color-background-light: #FEF3E2;
+    --color-background-light: #FEF3E2; 
     --color-background-black: #222222;
     --color-border-light: #ddd;
 
@@ -19,8 +19,8 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--color-background-black);
-    color: var(--color-text-light);
+    background-color: var(--color-background-light);
+    color: var(--color-text-dark);
 }
 
 /* ปรับสไตล์สำหรับหน้าจอขนาดเล็ก (Mobile responsiveness) */
