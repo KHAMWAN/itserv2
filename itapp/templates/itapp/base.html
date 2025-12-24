@@ -35,210 +35,123 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   </head>
   <body>
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <header class="d-flex justify-content-center py-3">
-        <ul class="nav nav-pills">
-          <li class="nav-item">
-            <a href="#" class="nav-link active" aria-current="page">หน้าหลัก</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">ครุภัณฑ์คอมพิวเตอร์</a>
-          </li>
-          <li class="nav-item"><a href="#" class="nav-link">ทะเบียนซ่อม</a></li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">ทะเบียนวัสดุรับ</a>
-          </li>
-          <li class="nav-item"><a href="#" class="nav-link">แจ้งซ่อม</a></li>
-        </ul>
-      </header>
-    </div>
-    <!-- Carousel slide -->
-    <div class="container">
-      <div id="carouselExampleCaptions" class="carousel slide mb-4">
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="3"
-            aria-label="Slide 4"
-          ></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              src="{% static 'imgs/itptrh01.jpg' %}"
-              class="d-block w-100"
-              alt="..."
-            />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
-              <p>
-                Some representative placeholder content for the first slide.
-              </p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img
-              src="{% static 'imgs/itptrh02.jpg' %}"
-              class="d-block w-100"
-              alt="..."
-            />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>
-                Some representative placeholder content for the second slide.
-              </p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img
-              src="{% static 'imgs/itptrh03.jpg' %}"
-              class="d-block w-100"
-              alt="..."
-            />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>
-                Some representative placeholder content for the third slide.
-              </p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img
-              src="{% static 'imgs/itptrh04.jpg' %}"
-              class="d-block w-100"
-              alt="..."
-            />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Four slide label 4</h5>
-              <p>
-                Some representative placeholder content for the third slide.
-              </p>
-            </div>
-          </div>
-        </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </div>
-    <!-- End Carousel slide -->
-    <div class="container">
-      <div class="row">
-        <div class="text-center col-sm-6">
-          <a class="btn btn-danger btn-lg" href="displaykru.php" role="button"
-            >Computers</a
+    <!-- header -->
+    <header>
+      <div class="px-3 py-2 text-bg-dark border-bottom">
+        <div class="container">
+          <div
+            class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
           >
-          <p></p>
-          <p>
-            <span><a href="displaykru.php">ครุภัณฑ์สารสนเทศ</a></span>
-            <span><a href="displaywass.php">&nbsp;&nbsp;วัสดุสารสนเทศ</a></span>
-            <span><a href="repair_frm.php">&nbsp;&nbsp;ทะเบียนซ่อม</a></span>
-            <span
-              ><a href="brw_crud_frm.php">&nbsp;&nbsp;บันทึกยืม-คืน</a></span
+            <a
+              href="/"
+              class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none"
             >
-            <span><a href="hiscom_frm.php">&nbsp;&nbsp;สมุดรายวัน</a></span>
-            <!-- span><a href="show_regis_ip.php">&nbsp;&nbsp;ทะเบียน-ip</a></span -->
-          </p>
-        </div>
-        <div class="text-center col-sm-6">
-          <a
-            class="btn btn-success btn-lg"
-            href="rpt_ink_out_was.php"
-            role="button"
-            >Documentation</a
-          >
-          <p></p>
-          <p>
-            <span
-              ><a href="rpt_repair.php" target="_blank"
-                >พิมพ์ใบส่งซ่อมอุปกรณ์คอมพิวเตอร์</a
+              <svg
+                class="bi me-2"
+                width="40"
+                height="32"
+                role="img"
+                aria-label="Bootstrap"
               >
-              |
-            </span>
-            <span
-              ><a href="rpt_quick_out_was.php" target="_blank"
-                >พิมพ์ใบจ่ายพัสดุ</a
-              >
-              | </span
-            ><span
-              ><a href="rpt_ink_out_was.php" target="_blank">พิมพ์ใบจ่ายหมึก</a>
-              | </span
-            ><span><a href="Label_qrcode.php"> ทดสอบQRCode</a></span>
-          </p>
+                <use xlink:href="#bootstrap"></use>
+              </svg>
+            </a>
+            <ul
+              class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small"
+            >
+              <li>
+                <a href="#" class="nav-link text-secondary">
+                  <svg
+                    class="bi d-block mx-auto mb-1"
+                    width="24"
+                    height="24"
+                    aria-hidden="true"
+                  >
+                    <use xlink:href="#home"></use>
+                  </svg>
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link text-white">
+                  <svg
+                    class="bi d-block mx-auto mb-1"
+                    width="24"
+                    height="24"
+                    aria-hidden="true"
+                  >
+                    <use xlink:href="#speedometer2"></use>
+                  </svg>
+                  Dashboard
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link text-white">
+                  <svg
+                    class="bi d-block mx-auto mb-1"
+                    width="24"
+                    height="24"
+                    aria-hidden="true"
+                  >
+                    <use xlink:href="#table"></use>
+                  </svg>
+                  Orders
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link text-white">
+                  <svg
+                    class="bi d-block mx-auto mb-1"
+                    width="24"
+                    height="24"
+                    aria-hidden="true"
+                  >
+                    <use xlink:href="#grid"></use>
+                  </svg>
+                  Products
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link text-white">
+                  <svg
+                    class="bi d-block mx-auto mb-1"
+                    width="24"
+                    height="24"
+                    aria-hidden="true"
+                  >
+                    <use xlink:href="#people-circle"></use>
+                  </svg>
+                  Customers
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="container">
-      <footer
-        class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
-      >
-        <div class="col-md-4 d-flex align-items-center">
-          <a
-            href="/"
-            class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1"
-            aria-label="Bootstrap"
+      <div class="px-3 py-2 border-bottom mb-3">
+        <div class="container d-flex flex-wrap justify-content-center">
+          <form
+            class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto"
+            role="search"
           >
-            <svg class="bi" width="30" height="24" aria-hidden="true">
-              <use xlink:href="#bootstrap"></use>
-            </svg>
-          </a>
-          <span class="mb-3 mb-md-0 text-body-secondary"
-            >© 2025 Company, Inc</span
-          >
+            <input
+              type="search"
+              class="form-control"
+              placeholder="Search..."
+              aria-label="Search"
+            />
+          </form>
+          <div class="text-end">
+            <button type="button" class="btn btn-light text-dark me-2">
+              Login
+            </button>
+            <button type="button" class="btn btn-primary">Sign-up</button>
+          </div>
         </div>
-        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-          <li class="ms-3">
-            <a class="text-body-secondary" href="#" aria-label="Instagram"
-              ><svg class="bi" width="24" height="24" aria-hidden="true">
-                <use xlink:href="#instagram"></use></svg
-            ></a>
-          </li>
-          <li class="ms-3">
-            <a class="text-body-secondary" href="#" aria-label="Facebook"
-              ><svg class="bi" width="24" height="24">
-                <use xlink:href="#facebook"></use></svg
-            ></a>
-          </li>
-        </ul>
-      </footer>
-    </div>
+      </div>
+    </header>
+    <!-- End header -->
+    {% block content %} {% endblock %}
   </body>
 </html>
 <!-- jquery -->
