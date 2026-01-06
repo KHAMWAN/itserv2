@@ -12,6 +12,14 @@ def karu(request):
     return render(request, 'itapp/karu.html')
 
 
+def repair(request):
+    return render(request, 'itapp/repair.html')
+
+
+def report(request):
+    return render(request, 'itapp/report.html')
+
+
 def about(request):
     return render(request, 'itapp/about.html')
 
