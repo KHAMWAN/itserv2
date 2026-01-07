@@ -6,6 +6,7 @@
     --color-text-light: #fff;
     --color-background-light: #FEF3E2; 
     --color-background-black: #222222;
+    --color-background-footer: #FA812F;
     --color-border-light: #ddd;
 
     /* สีสำหรับ Stats */
@@ -22,6 +23,7 @@ body {
     background-color: var(--color-background-light);
     color: var(--color-text-dark);
 }
+
 
 /* ปรับสไตล์สำหรับหน้าจอขนาดเล็ก (Mobile responsiveness) */
 @media (max-width: 900px) {
