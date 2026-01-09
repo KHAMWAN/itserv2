@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="IT photharam Hospital" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% block title %}
+    <title>IT Department</title>
+    {% endblock %}
+    <link
+      rel="icon"
+      href="{% static 'imgs/favicon.ico' %}"
+      type="image/x-icon"
+    />
+    <!-- Bootstrap icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <!-- Bootstrap.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"></script>
+    <!-- SweetAlert2.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.22.4/dist/sweetalert2.min.css"
+    />
+    <!-- Datatables -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/v/bs5/dt-2.3.3/datatables.min.css"
+    />
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+      <!-- Brand -->
+      <a class="navbar-brand" href="{% url 'index' %}"
+        >&nbsp;&nbsp;<i class="bi bi-cpu-fill"></i>&nbsp;Computer Management</a
+      >
+      <!-- Toggler/collapsibe Button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapsibleNavbar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'karu' %}" id="click">Computers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'about' %}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'contact' %}"
+              >Contact&nbsp;&nbsp;</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div>{% block content %} {% endblock %}</div>
+  </body>
+</html>
+
+<!-- SweetAlert2.js -->
+<script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/sweetalert2@11.22.4/dist/sweetalert2.all.min.js"
+></script>
+<!-- jquery -->
+<script
+  type="text/javascript"
+  src="https://code.jquery.com/jquery-3.7.1.js"
+></script>
+<!-- Datatables -->
+<script
+  type="text/javascript"
+  src="https://cdn.datatables.net/v/bs5/dt-2.3.3/datatables.min.js"
+></script>
+
+<!-- function -->
+<script type="text/javascript">
+  $(document).ready(function () {
+    $("table").DataTable();
+  });
+</script>
