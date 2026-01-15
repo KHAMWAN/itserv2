@@ -74,12 +74,19 @@ WSGI_APPLICATION = 'itserv2.wsgi.application'
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'your_db_name',     # Name of the database you created
+        'USER': 'your_username',    # Your MySQL username (e.g., 'root')
+        'PASSWORD': 'your_password',  # Your MySQL password
+        'HOST': 'localhost',        # Or the IP of your MySQL server
+        'PORT': '3306',             # Default MySQL port
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
